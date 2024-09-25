@@ -20,9 +20,9 @@ kotlinDatetime = "0.6.1"
 coil = "3.0.0-alpha06"
 ktor = "2.3.11"
 #funciona con ios
-#navigation-compose = "2.8.0-alpha02"
+navigation-compose = "2.8.0-alpha02"
 #da problemas con iOS pero android OK
-navigation-compose = "2.8.0-alpha08"
+#navigation-compose = "2.8.0-alpha08"
 #navigation-compose = "2.8.0-alpha10"
 kotlinxCoroutinesCore = "1.7.3"
 kotlinxDatetime = "0.4.1"
