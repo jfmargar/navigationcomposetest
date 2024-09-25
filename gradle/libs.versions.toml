@@ -1,5 +1,5 @@
 [versions]
-agp = "8.2.2"
+agp = "8.3.2"
 android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
@@ -13,7 +13,42 @@ androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
 compose-plugin = "1.6.11"
 junit = "4.13.2"
-kotlin = "2.0.20"
+kotlin = "2.0.0"
+kotlinDatetime = "0.6.1"
+
+
+coil = "3.0.0-alpha06"
+ktor = "2.3.11"
+#funciona con ios
+#navigation-compose = "2.8.0-alpha02"
+#da problemas con iOS pero android OK
+navigation-compose = "2.8.0-alpha08"
+#navigation-compose = "2.8.0-alpha10"
+kotlinxCoroutinesCore = "1.7.3"
+kotlinxDatetime = "0.4.1"
+buildConfig = "5.3.5"
+koin = "3.6.0-Beta4"
+koinCompose = "1.2.0-Beta4"
+gson = "2.10.1"
+
+#Permisos
+moko-permissions = "0.18.0"  #moko es multiplatform
+#accompanist-permissions = "0.19.0" #solo android
+
+#MLKit
+mlkit-text-recognition = "16.0.1"
+mlkit-barcode-recognition = "17.1.0"
+camera = "1.3.4"
+#cameraLifecycle = "1.3.4"
+#cameraView = "1.3.4"
+
+#Firebase android
+firebase-android-bom = "32.8.1"
+#Gradle
+gradlePlugins-crashlytics = "2.9.9"
+gradlePlugins-google-services = "4.4.1"
+
+skie = "0.8.4"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -28,6 +63,42 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinDatetime" }
+google-gson = { module = "com.google.code.gson:gson", version.ref = "gson"}
+
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network-ktor = { group = "io.coil-kt.coil3", name = "coil-network-ktor", version.ref = "coil" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
+ktor-client-contentnegotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-auth = {group = "io.ktor", name = "ktor-client-auth", version.ref = "ktor"}
+androidx-navigation-compose = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "navigation-compose" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android" }
+koin-core = { group = "io.insert-koin", name = "koin-core" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose" }
+#esta aún no está en el bom y hay que meterla a mano
+koin-compose-viewmodel = { group = "io.insert-koin", name = "koin-compose-viewmodel", version.ref = "koinCompose"}
+
+#Firebase
+firebase-android-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-android-bom" }
+firebase-android-analytics = {module = "com.google.firebase:firebase-analytics"}
+firebase-android-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-android-auth = {module = "com.google.firebase:firebase-auth"}
+firebase-firestore = {module = "com.google.firebase:firebase-firestore"}
+
+#Permisos
+moko-permissions-compose = { group = "dev.icerock.moko", name = "permissions-compose", version.ref = "moko-permissions" }
+#Cámera y MLkit
+mlkit-textrecognition = { group = "com.google.mlkit", name = "text-recognition", version.ref = "mlkit-text-recognition" }
+mlkit-barcoderecognition = { group = "com.google.mlkit", name = "barcode-scanning", version.ref = "mlkit-barcode-recognition" }
+androidx-camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "camera" }
+androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camera" }
+androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camera" }
+androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camera" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -35,3 +106,12 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+gradleBuildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }
+
+#Firebase
+crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "gradlePlugins-crashlytics" }
+google-services = { id = "com.google.gms.google-services", version.ref = "gradlePlugins-google-services" }
+
+skie = { id = "co.touchlab.skie", version.ref = "skie" }
